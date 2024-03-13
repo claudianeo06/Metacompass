@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>MAIND - Metacompass</title>
+    <meta name="description" content="MAIND – SUPSI 2024" />
+    <link href="src/client.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+      <span id="x"></span>
+      <span id="y"></span>
+      <span id="alpha"></span>
+      <span id="beta"></span>
+      <span id="gamma"></span>
+      <span id="time"></span>
+      <span id="id"></span>
+      <span id="button1"></span>
+      <span id="button2"></span>
+      <span id="carouselIndex"></span>
+    </div>
+
+    <div id="gallery">
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+    </div>
+
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 100;">
+      <div id="overlay-country"></div>
+      <div id="overlay-coordinates"></div>
+      <div class="swiper mySwiper" pagination="true" pagination-clickable="true" slides-per-view="auto" centered-slides="true" space-between="30">
+        <div class="swiper-wrapper">
+          <div id="carousel1" class="block" data-block-id="1" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/denmark_1.jpg"/>
+          </div>
+          <div id="carousel2" class="block" data-block-id="2" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/latvia_1.jpg"/>
+          </div>
+          <div id="carousel3" class="block" data-block-id="3" style="display: none;">
+            <swiper-slide-slidemg id="item" class="item" src="./src/img/lithuania_1.jpg"/>
+          </div>
+          <div id="carousel4" class="block" data-block-id="4" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/poland_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/poland_2.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/poland_3.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/poland_4.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/poland_5.jpg"/>
+          </div>
+          <div id="carousel5" class="block" data-block-id="5" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/germany_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/germany_2.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/germany_3.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/germany_4.jpg"/>
+          </div>
+          <div id="carousel6" class="block" data-block-id="6" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/netherlands_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/netherlands_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/netherlands_1.jpg"/>
+          </div>
+          <div id="carousel7" class="block" data-block-id="7" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/czeck_republic_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/czeck_republic_2.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/czeck_republic_3.jpg"/>
+          </div>
+          <div id="carousel8" class="block" data-block-id="8" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/ukraine_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/ukraine_2.jpg"/>
+          </div>
+          <div id="carousel9" class="block" data-block-id="9" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/france_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/france_2.jpg"/>
+          </div>
+          <div id="carousel10" class="block" data-block-id="10" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/switzerland_1.jpg"/>
+          </div>
+          <div id="carousel11" class="block" data-block-id="11" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/romania_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/romania_2.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/romania_3.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/romania_4.jpg"/>
+          </div>
+          <div id="carousel12" class="block" data-block-id="12" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/uk_1.jpg"/>
+          </div>
+          <div id="carousel13" class="block" data-block-id="13" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/hungary_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_2.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_3.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_4.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_5.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_6.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_7.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_8.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/hungary_9.jpg"/>
+          </div>
+          <div id="carousel14" class="block" data-block-id="1"4style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/croatia_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/croatia_1.jpg"/>
+          </div>
+          <div id="carousel15" class="block" data-block-id="15" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/serbia_1.jpg"/>
+          </div>
+          <div id="carousel16" class="block" data-block-id="16" style="display: none;">
+            <swiper-slide id="item" class="item" src="./src/img/slovenia_1.jpg"/>
+            <swiper-slide id="item" class="item" src="./src/img/slovenia_2.jpg"/>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div id="closeOverlay"></div>
+    </div>
+
+    <div class="cross" id="cross"></div>
+  </body>
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="src/client.js"></script>
+</html>

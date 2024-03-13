@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MAIND - Metacompass</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="src/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="Header1">Discover the Artists of FUTURES Foundation</h1>
+    <button id="goBackButton" onclick="goBack()">Back to map</button>
+  </header>
+  
+  <main id="main">
+    <section id="accelerometer">
+      <div id="position-indicators">
+        <span id="x"></span>
+        <span id="y"></span>
+        <span id="alpha"></span>
+        <span id="beta"></span>
+        <span id="gamma"></span>
+        <span id="time"></span>
+        <span id="id"></span>
+        <span id="button1"></span>
+        <span id="button2"></span>
+        <span id="carouselIndex"></span>
+      </div>
+    </section>
+
+    <section id="interactive-display">
+      <div class="compass">
+        <div class="center-point"></div>
+        <div class="ring"></div>
+        <div class="smallering"></div>
+        <div class="indicator" id="indicator"></div>
+        <div class="cross" id="cross"></div>
+        <svg width="300" height="300">
+          <circle cx="50%" cy="50%" r="130" fill="none" stroke="white" stroke-width="20" stroke-dasharray="1,12"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="action-footer">
+      <button id="accelPermsButton" onclick="getAccel()">Click to start</button>
+      <div id="instructions">Move the phone to navigate inside the images</div>
+      <button id="newButtonId" onclick="getInfo()">Select picture</button>
+      
+      <div class="metadata">
+        <div class="Germany" id="Germany" style="display: none;">51.1657° N, 10.4515° E<br />Germany	
+        <br />Aindreas Scholz<br />Bärbel Reinhard<br />Karina-Sirkku Kurz<br />Maximilan Mann</div>
+        
+        <div class="Poland" id="Poland" style="display: none;">51.9194° N, 19.1451° E<br />Poland	
+        <br />Ela Polkowska<br />Kacper Szalecki<br />Karolina Jonderko<br />Ligia Poplawska<br />Martyna Benedika</div>
+        
+        <div class="Hungary" id="Hungary" style="display: none;">47.1625° N, 19.5033° E<br />Hungary	
+        <br />Adél Koleszár<br />Daniel Szalai<br />David Biro<br />Enikő Hodosy<br />Kata Geibl<br />Sári Zagyvai<br />Szilvia Bolla<br />Szilvia Mucsy</div>
+
+        <div class="Latvia" id="Latvia" style="display: none;">56.8796° N, 24.6032° E<br />Latvia	
+        <br />Kristīne Krauze-Slucka</div>
+        
+        <div class="CzeckRepublic" id="CzeckRepublic" style="display: none;">49.8175° N, 15.4730° E<br />Czeck Republic	
+        <br />Josef Janosik<br />Michal Patycki<br />Vera Ryklova</div>
+       
+        <div class="Romania" id="Romania" style="display: none;">45.9432° N, 24.9668° E<br />Romania	
+        <br />Alin Barbir<br />Claudiu Guraliuc<br />Cristina Garlesteanu<br />Patricia Morosan</div>
+        
+        <div class="Croatia" id="Croatia" style="display: none;">45.1000° N, 15.2000° E<br />Croatia	
+        <br />Dea Botica<br />Lucija Bogunović</div>
+         
+        <div class="Lithuania" id="Lithuania" style="display: none;">55.1694° N, 23.8813° E<br />Lithuania	
+        <br />Ieva Baltaduonyte</div>
+        
+        <div class="Netherlands" id="Netherlands" style="display: none;">52.1326° N, 5.2913° E<br />Netherlands	
+        <br />Josephina van de Water<br />Pauline Niks<br />Sebastian Koudijzer</div>
+       
+        <div class="Slovenia" id="Slovenia" style="display: none;">46.1512° N, 14.9955° E<br />Slovenia	
+        <br />Ana Zibelnik<br />Tereza Kozinc</div>
+          
+        <div class="Serbia" id="Serbia" style="display: none;">44.0165° N, 21.0059° E<br />Serbia	
+        <br />Filip Bojović</div>         
+          
+        <div class="UK" id="UK" style="display: none;">55.3781° N, 3.4360° W<br />UK	
+        <br />Marco Kesseler</div>                    
+                                               
+        <div class="Ukraine" id="Ukraine" style="display: none;">48.3794° N, 31.1656° E<br />Ukraine	
+        <br />Marysia Myanovska<br />Xenia Petrovska</div>
+ 
+        <div class="Switzerland" id="Switzerland" style="display: none;">46.8182° N, 8.2275° E<br />Netherlands	
+        <br />Matthieu Croizier</div>            
+        
+        <div class="Denmark" id="Denmark" style="display: none;">56.2639° N, 9.5018° E<br />Denmark	
+        <br />Oscar Scott Carl</div>         
+      
+        <div class="France" id="France" style="display: none;">46.2276° N, 2.2137° E<br />France	
+        <br />Marie Hervé<br />Romain Bagnard</div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

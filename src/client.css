@@ -1,0 +1,528 @@
+body,
+html {
+	background: url('img/background.png') center center/cover no-repeat fixed;
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	overflow: hidden;
+	cursor: none;
+}
+
+#gallery {
+	height: 110vh;
+	width: 110vw;
+	position: relative;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8); 
+	z-index: 1000; 
+	justify-content: center;
+	align-items: center;
+}
+
+#closeOverlay{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#overlay-country{
+	position: fixed;
+	top: 100px;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	z-index: 10; 
+	color: white; 
+	font-size: 50px; 
+	text-align: center; 
+	font-weight: 400; 
+	padding: 20px 0;
+	font-family: 'Space Grotesk', sans-serif; 
+	text-transform: uppercase;
+}
+
+#overlay-coordinates{
+	position: fixed;
+	top: 170px;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	z-index: 10; 
+	color: white; 
+	font-size: 40px; 
+	text-align: center; 
+	font-weight: 300; 
+	padding: 20px 0;
+	font-family: 'Space Grotesk', sans-serif; 
+	text-transform: uppercase;
+}
+
+.slide-text {
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	margin-top: 20px; 
+	font-family: 'Space Grotesk', sans-serif; 
+}  
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-wrapper {
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px; 
+	height: 100%;
+}
+  
+.swiper-slide img {
+	display: block;
+	width: 400px; 
+	height: auto; 
+	margin: 0 auto; 
+	object-fit: contain; 
+	justify-content: center;
+	align-items: center;	
+}
+
+.swiper-button-next {
+	display: none !important;
+}
+
+.swiper-button-prev {
+	display: none !important;
+}
+
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+	flex: 0 0 auto; 
+	width: 50px; 
+	height: auto; 
+	margin-right: 10px; 
+}
+  
+.image-text {
+	text-align: center;
+	font-size: 24px;
+	color: #fff; 
+	margin-top: 20px; 
+	font-family: 'Space Grotesk', sans-serif; 
+}  
+
+.responsive-image {
+	max-width: 300px;
+	height: auto;
+	display: block; 
+	margin: 0 auto; 
+	object-fit: contain; 
+}
+
+.carou-image{
+	max-width: 300px;
+	height: auto;
+	display: block; 
+	margin: 0 auto; 
+	object-fit: contain; 
+}
+
+.cross {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+	width: 70px;
+	height: 70px;
+}
+
+.cross::before, .cross::after {
+	content: '';
+	position: absolute;
+	background-color: white; 
+}
+  
+.cross::before {
+	/* Horizontal line */
+	width: 70px; 
+	height: 2px;
+	top: 50%; 
+}
+  
+.cross::after {
+	/* Vertical line */
+	width: 2px;
+	height: 70px; 
+	left: 50%; 
+}
+
+.block {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	z-index: 1;
+}
+
+.block:hover {
+	z-index: 5;
+	opacity: 100%;
+}
+
+.block:nth-child(1) {
+	top: 2%;
+	left: 15%;
+	background: url("./img/denmark_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(2) {
+	top: 0%;
+	right: 20%;
+	background: url("./img/latvia_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(3) {
+	top: 10%;
+	right: 29%;
+	background: url("./img/lithuania_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(4) {
+	top: 18%;
+	right: 35%;
+	background: url("./img/poland_3.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(5) {
+	top: 21%;
+	right: 42%;
+	background: url("./img/poland_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(6) {
+	top: 18%;
+	right: 46%;
+	background: url("./img/poland_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(7) {
+	top: 28%;
+	right: 40%;
+	background: url("./img/poland_4.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;
+	background-size: 50%;
+}
+.block:nth-child(8) {
+	top: 30%;
+	right: 35%;
+	background: url("./img/poland_5.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(9) {
+	top: 18%;
+	left: 28%;
+	background: url("./img/germany_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(10) {
+	top: 20%;
+	left: 34%;
+	background: url("./img/germany_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(11) {
+	top: 28%;
+	left: 29%;
+	background: url("./img/germany_3.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(12) {
+	top: 35%;
+	left: 32%;
+	background: url("./img/germany_4.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 55%;
+}
+.block:nth-child(13) {
+	top: 21%;
+	left: 18%;
+	background: url("./img/netherlands_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(14) {
+	top: 17%;
+	left: 20%;
+	background: url("./img/netherlands_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(15) {
+	top: 19%;
+	left: 15%;
+	background: url("./img/netherlands_3.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(16) {
+	top: 33%;
+	left: 42%;
+	background: url("./img/czeck_republic_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(17) {
+	top: 36%;
+	left: 44%;
+	background: url("./img/czeck_republic_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(18) {
+	top: 38%;
+	left: 40%;
+	background: url("./img/czeck_republic_3.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(19) {
+	top: 43%;
+	right: 12%;
+	background: url("./img/ukraine_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(20) {
+	top: 40%;
+	right: 19%;
+	background: url("./img/ukraine_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(21) {
+	bottom: 10%;
+	left: 5%;
+	background: url("./img/france_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(22) {
+	bottom: 20%;
+	left: 0%;
+	background: url("./img/france_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(23) {
+	top: 50%;
+	left: 25%;
+	background: url("./img/switzerland_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(24) {
+	bottom: 13%;
+	right: 30%;
+	background: url("./img/romania_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(25) {
+	bottom: 13%;
+	right: 25%;
+	background: url("./img/romania_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(26) {
+	bottom: 5%;
+	right: 32%;
+	background: url("./img/romania_3.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+} 
+.block:nth-child(27) {
+	bottom: 5%;
+	right: 25%;
+	background: url("./img/romania_4.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(28) {
+	top: 10%;
+	left: -2%;
+	background: url("./img/uk_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(29) {
+	bottom: 35%;
+	right: 45%;
+	background: url("./img/hungary_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(30) {
+	bottom: 32%;
+	right: 43%;
+	background: url("./img/hungary_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(31) {
+	bottom: 27%;
+	right: 44%;
+	background: url("./img/hungary_3.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(32) {
+	bottom: 32%;
+	right: 46%;
+	background: url("./img/hungary_4.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(33) {
+	bottom: 25%;
+	right: 48%;
+	background: url("./img/hungary_5.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(34) {
+	bottom: 22%;
+	right: 38%;
+	background: url("./img/hungary_6.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(35) {
+	bottom: 27%;
+	right: 40%;
+	background: url("./img/hungary_7.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(36) {
+	bottom: 22%;
+	right: 42%;
+	background: url("./img/hungary_8.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(37) {
+	bottom: 25%;
+	right: 50%;
+	background: url("./img/hungary_9.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(38) {
+	bottom: 8%;
+	right: 50%;
+	background: url("./img/croatia_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(39) {
+	bottom: 10%;
+	right: 47%;
+	background: url("./img/croatia_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(40) {
+	bottom: 0%;
+	right: 40%;
+	background: url("./img/serbia_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(41) {
+	bottom: 15%;
+	left: 35%;
+	background: url("./img/slovenia_1.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
+.block:nth-child(42) {
+	bottom: 15%;
+	left: 31%;
+	background: url("./img/slovenia_2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	opacity: 50%;	
+	background-size: 50%;
+}
